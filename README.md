@@ -33,7 +33,7 @@ Your app has multiple components and does the following things:
 - **BONUS**: Include a button that converts the temperature from Fahrenheit to Celsius
 - **BONUS**: Change the styling of the page based on weather conditions. 
 - **BONUS**: Include the sunrise and sunset times (hint: maybe [Moment.js](https://momentjs.com/) will be helpful!) and some information about humidity, atmospheric pressure, etc.
-- **BONUS**: Hide your API key in a `.env` file (if you do this, you need to send Jason the `.env` file in Slack)
+- **BONUS**: Hide your API key in a `.env` file (if you do this, you need to send Jason the `.env` file in the PR or Slack)
 - **BONUS**: Deploy your app!
 
 #### About the `.env` file for your API Key:

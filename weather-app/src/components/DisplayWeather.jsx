@@ -26,7 +26,7 @@ class DisplayWeather extends Component {
           <div>
             <h1>
               {" "}
-              {this.state.celcius === true
+              {this.state.celcius !== true
                 ? `${((Number(zipCodeData.main.temp) - 32) * 5) / 9}`
                 : `${zipCodeData.main.temp}`}
             </h1>

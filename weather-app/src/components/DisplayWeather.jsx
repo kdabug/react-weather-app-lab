@@ -3,7 +3,17 @@ import React, { Component } from "react";
 class DisplayWeather extends Component {
   constructor() {
     super();
-    // console.log("zipCodeData > displayWeather: ", this.props);
+    this.toggleCel = this.toggleCel.bind(this);
+    this.state = {
+      celcius: false
+    };
+  }
+
+  toggleCel(e) {
+    e.preventDefault();
+    this.setState(prevState => {
+      return { celcius: !prevState.celcius };
+    });
   }
 
   render() {
@@ -14,9 +24,21 @@ class DisplayWeather extends Component {
       zipCodeData !== null && (
         <div>
           <div>
-            <h1> {zipCodeData.main.temp}</h1>
+            <h1>
+              {" "}
+              {this.state.celcius === true
+                ? `${((Number(zipCodeData.main.temp) - 32) * 5) / 9}`
+                : `${zipCodeData.main.temp}`}
+            </h1>
             <div>
               <h2>{zipCodeData.name} Temperature</h2>
+            </div>
+            <div>
+              <button onClick={this.toggleCel}>
+                {this.state.celcius === true
+                  ? `Change to Celcius`
+                  : `Change to Farenheit`}
+              </button>
             </div>
           </div>
           <div className="min-max-temps">

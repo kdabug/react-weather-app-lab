@@ -1,33 +1,69 @@
-.App {
+body {
+  font-family: "Nunito", sans-serif;
   text-align: center;
+  background-color: #ffb90e;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 60px;
+  margin: 0px;
+  padding: 0px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h2 {
+  font-size: 28px;
+  padding: 10px;
+  margin: 0px;
+}
+.min-max-temps {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100vw;
+}
+.min-temp {
+  border: grey 2px solid;
+  width: 25%;
+  align-items: center;
+  margin: 5px;
+}
+.max-temp {
+  border: grey 2px solid;
+  width: 25%;
+  align-items: center;
+  margin: 5px;
+}
+.humidity-pressure-data {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+.humidity {
+  border: grey 2px solid;
+  width: 25%;
+  align-items: center;
+  margin: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.pressure {
+  border: grey 2px solid;
+  width: 25%;
+  align-items: center;
+  margin: 5px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.weather-type {
+  width: 100vw;
+  background-color: #b2871c;
+  justify-content: center;
+  align-content: center;
+  margin: 10px;
+}
+.description {
+}
+.image {
+  display: flex;
+  width: 25%;
+  justify-content: center;
+  margin: 0 auto;
 }

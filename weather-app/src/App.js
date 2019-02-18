@@ -43,7 +43,7 @@ class App extends Component {
     console.log("this.state.zipCodeData > app: ", this.state.zipCodeData);
     return (
       <div className="App">
-        <h1>Hello, react</h1>
+        <h1>Hello, weather</h1>
         <ZipForm
           value={this.state.zipCode}
           onChange={this.handleChange}

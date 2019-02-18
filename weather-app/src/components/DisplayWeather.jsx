@@ -14,8 +14,10 @@ class DisplayWeather extends Component {
       zipCodeData !== null && (
         <div>
           <div>
-            {zipCodeData.main.temp}
-            <div>{zipCodeData.name} Temperature</div>
+            <h1> {zipCodeData.main.temp}</h1>
+            <div>
+              <h2>{zipCodeData.name} Temperature</h2>
+            </div>
           </div>
           <div className="min-max-temps">
             <div className="min-temp">
@@ -39,9 +41,15 @@ class DisplayWeather extends Component {
           </div>
           <div className="weather-type">
             <div className="description">
-              {zipCodeData.weather[0].main} -
-              {zipCodeData.weather[0].description}
-              <div>Weather Type</div>
+              {zipCodeData.weather[0].main}
+              <div className="image">
+                <img
+                  src={`http://openweathermap.org/img/w/${
+                    zipCodeData.weather[0].icon
+                  }.png`}
+                />
+              </div>
+              <div>{zipCodeData.weather[0].description}</div>
             </div>
           </div>
         </div>
